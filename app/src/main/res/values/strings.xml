@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Bangku</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="submitKey">Submit Key</string>
+    <string name="inputYourKeyHere">Input your key here... (づ●‿●)づ</string>
+    <string name="wrongKeyLength">Key length must between 8 to 16 character... (╯_╰)</string>
+    <string name="wrongKeyCharacter">Key characters must a-z, A-Z, or number (╯_╰)</string>
+
+    <string name="itemMenu0">key</string>
+    <string name="itemMenu1">Email</string>
+    <string name="itemMenu2">Social Media</string>
+    <string name="itemMenu3">Bank</string>
+    <string name="itemMenu4">E-commerce</string>
+    <string name="itemMenu5">Online game</string>
+    <string name="itemMenu6">Other</string>
 </resources>

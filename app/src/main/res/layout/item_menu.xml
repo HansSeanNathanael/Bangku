@@ -44,6 +44,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            android:id="@+id/itemMenuTitle"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             app:layout_constraintBottom_toBottomOf="parent"

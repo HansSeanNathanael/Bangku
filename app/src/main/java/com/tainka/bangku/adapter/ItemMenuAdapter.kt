@@ -1,5 +1,6 @@
 package com.tainka.bangku.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -13,9 +14,17 @@ class ItemMenuAdapter : RecyclerView.Adapter<ItemMenuAdapter.ItemMenuViewHolder>
 
     inner class ItemMenuViewHolder(private val binding : ItemMenuBinding) : RecyclerView.ViewHolder(binding.root)
     {
+        /**
+         * @param itemMenuData : data about item menu (logo, title, and function when clicked)
+         */
         fun bind(itemMenuData : MenuItemData)
         {
             binding.menuItemImage.setImageResource(itemMenuData.logoResource)
+            binding.itemMenuTitle.setText(itemMenuData.text)
+
+            binding.root.setOnClickListener {
+                itemMenuData.execute.invoke()
+            }
         }
     }
 
@@ -32,6 +41,9 @@ class ItemMenuAdapter : RecyclerView.Adapter<ItemMenuAdapter.ItemMenuViewHolder>
         return itemList.size
     }
 
+    /**
+     * @param newList : new list of item menu
+     */
     fun setItemList(newList : ArrayList<MenuItemData>)
     {
         itemList.clear()

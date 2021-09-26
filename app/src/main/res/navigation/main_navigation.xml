@@ -8,5 +8,18 @@
         android:id="@+id/fragmentFileListPage"
         android:name="com.tainka.bangku.fragment.FragmentFileListPage"
         android:label="fragment_file_list_page"
-        tools:layout="@layout/fragment_file_list_page" />
+        tools:layout="@layout/fragment_file_list_page" >
+        <action
+            android:id="@+id/action_fragmentFileListPage_to_fragmentEncryptionKeyPage2"
+            app:destination="@id/fragmentEncryptionKeyPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEncryptionKeyPage"
+        android:name="com.tainka.bangku.fragment.FragmentEncryptionKeyPage"
+        android:label="fragment_encryption_key_page"
+        tools:layout="@layout/fragment_encryption_key_page" >
+        <argument
+            android:name="mainMenuFragment"
+            app:argType="com.tainka.bangku.fragment.FragmentFileListPage" />
+    </fragment>
 </navigation>
